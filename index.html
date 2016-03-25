@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Bible books</title>
+      <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+      <link rel='stylesheet prefetch' href='https://cdn.jsdelivr.net/foundation/6.1.1/foundation.min.css'>
+      <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+
+   <body>
+
+      <timeline>
+         <div id="nav">
+            <div id="navUp"><span class="fa fa-chevron-up"></span></div>
+            <div id="navDn"><span class="fa fa-chevron-down"></span></div>
+         </div>
+         <div id="settings">
+            <div id="settings-btn">
+               <span class="fa fa-cog"></span>
+            </div>
+            <div id="settings-menu">
+               <h4>SETTINGS</h4>
+               <span><input id="tglBblComp" type="checkbox" /> Hide bible books completed</span><br>
+               <span><input id="tglBblCov" type="checkbox" /> Hide bible books time covered</span><br>
+               <span><input id="tglKings" type="checkbox" /> Hide kings</span><br>
+            </div>
+         </div>
+         <div id="legend">
+            <div id="expand"><span class="fa fa-list-ul"></span></div>
+            <div id="help"><span class="fa fa-question"></span></div>
+            <div id="key">
+               <h4>LEGEND</h4>
+               <p><div class="blob color-yl"></div> Time covered</p><br>
+               <p><div class="blob color-red"></div> Lifespan</p><br>
+               <p><div class="blob color-rbl"></div> Reign of Judean King</p><br>
+               <p><div class="blob color-bl"></div> Reign of King of Israel</p><br>
+            </div>
+         </div>
+         <div id="mainline"></div>
+         <dates class="linegroup"></dates>
+
+         <info>
+            <div id="bblComp">
+               <!-- Pentateuch + Job -->
+               <div class="info span-1-5 point-lf info-1 time-27-8-7">(1513) Moses writes <b>Genesis</b></div>
+               <div class="info span-1-5 point-lf info-2 time-27-8-8">(1512) Moses writes <b>Exodus</b> and <b>Leviticus</b></div>
+               <div class="info span-1-5 point-lf info-3 time-28-2-7">(1473) Moses writes <b>Numbers</b>, <b>Deuteronomy</b>, and <b>Job</b></div>
+               <!-- Joshua > Ruth -->
+               <div class="info span-1-5 point-lf info-4 time-28-5">(1450) <b>Joshua</b> writes the book bearing his name</div>
+               <div class="info span-1-5 point-lf info-1 time-32-0">(1100) <b>Judges</b> is completed by Samuel</div>
+               <div class="info span-1-5 point-lf info-2 time-32-1">(1090) <b>Ruth</b> is written by Samuel</div>
+               <!-- 1 & 2 Samuel -->
+               <div class="info span-1-5 point-lf info-3 time-32-2-2">(1078) <b>1 Samuel</b> completed by Samuel, Gad, and Nathan</div>
+               <div class="info span-1-5 point-lf info-4 time-32-6">(1040) <b>2 Samuel</b> written by Gad and Nathan</div>
+
+               <!-- Jeremiah, Lamentations, 1&2 Kings -->
+               <div class="info span-1-5 point-lf info-4 time-36-9-3">(607) Jeremiah writes his <b>Lamentations</b></div>
+               <div class="info span-1-5 point-lf info-7 time-37-2">(580) <b>1 & 2 Kings</b> and <b>Jeremiah</b> are completed by him</div>
+
+               <!-- Ezra + Chronicles -->
+               <div class="info span-1-5 point-lf info-3 time-38-4">(460) <b>Ezra</b> writes the book bearing his name and <b>1 & 2 Chronicles</b></div>
+
+               <!-- Esther and Nehemiah -->
+               <div class="info span-1-5 point-lf info-5 time-38-5-7">(443) <b>Nehemiah</b> is completed</div>
+               <div class="info span-1-5 point-lf info-1 time-38-2-5">(475) <b>Esther</b> is written by Mordecai</div>
+
+               <!-- Poetic books -->
+               <div class="info span-1-5 point-lf info-2 time-38-4">(460) <b>Psalms</b> is compiled by Ezra</div>
+               <div class="info span-1-5 point-lf info-6 time-35-8-3">(717) <b>Proverbs</b> is compiled by King Agur</div>
+               <div class="info span-1-5 point-lf info-5 time-32-8">(1020) <b>Song of Solomon</b> is written by King Solomon</div>
+               <div class="info span-1-5 point-lf info-6 time-33-0">(1000) <b>Ecclesiastes</b> is completed by King Solomon</div>
+
+               <!-- Major prophets -->
+               <div class="info span-1-5 point-lf info-5 time-35-6-8">(732) <b>Isaiah</b> writes his prophetic book</div>
+               <div class="info span-1-5 point-lf info-6 time-37-0-9">(591) <b>Ezekiel</b> writes his prophetic book</div>
+               <div class="info span-1-5 point-lf info-8 time-37-7-4">(536) <b>Daniel</b> writes his prophetic book</div>
+
+               <!-- Minor prophets -->
+               <div class="info span-1-5 point-lf info-4 time-35-5-5">(745) <b>Hosea</b> writes his prophetic book</div>
+               <div class="info span-1-5 point-lf info-2 time-34-8">(820?) <b>Joel</b> writes his prophetic book</div>
+               <div class="info span-1-5 point-lf info-3 time-34-9-6">(804) <b>Amos</b> writes his prophetic book</div>
+               <div class="info span-1-5 point-lf info-5 time-36-9-3">(607) <b>Obadiah</b> writes his prophetic book</div>
+               <div class="info span-1-5 point-lf info-1 time-34-5-6">(844) <b>Jonah</b> writes his prophetic book</div>
+               <div class="info span-1-5 point-lf info-7 time-35-8-3">(717) <b>Micah</b> writes his prophetic book</div>
+               <div class="info span-1-5 point-lf info-2 time-36-6-8">(632) <b>Nahum</b> writes his prophetic book</div>
+               <div class="info span-1-5 point-lf info-3 time-36-7-2">(628?) <b>Habakkuk</b> writes his prophetic book</div>
+               <div class="info span-1-5 point-lf info-1 time-36-5-2">(648) <b>Zephaniah</b> writes his prophetic book</div>
+               <div class="info span-1-5 point-lf info-9 time-37-8">(520) <b>Haggai</b> writes his prophetic book</div>
+               <div class="info span-1-5 point-lf info-10 time-37-8-2">(518) <b>Zechariah</b> writes his prophetic book</div>
+               <div class="info span-1-5 point-lf info-4 time-38-5-7">(443) <b>Malachi</b> writes his prophetic book</div>
+
+               <!-- GREEK SCRIPTURES -->
+               <div class="info span-1-5 point-lf info-1 time-43-4-1">(41) The gospel of <b>Matthew</b> is completed</div>
+               <div class="info span-1-5 point-lf-4 fade-rt info-9 time-43-6">(60-65) The gospel of <b>Mark</b> is completed</div>
+               <div class="info span-1-5 point-lf-2 info-7 time-43-5-6">(56-58) The gospel of <b>Luke</b> is completed</div>
+               <div class="info span-1-5 point-lf info-19 time-43-9-8">(98) The gospel of <b>John</b> and his <b>3 letters</b> are completed</div>
+
+               <div class="info span-1-5 point-lf info-11 time-43-6-1">(61) The book of <b>Acts</b> is written</div>
+
+               <!-- Paul's letters -->
+               <div class="info span-1-5 point-lf info-6 time-43-5-6">(56) The letters of <b>Romans</b> is completed</div>
+               <div class="info span-1-5 point-lf info-5 time-43-5-5">(55) The letter of <b>1 & 2 Corinthians</b> are completed</div>
+               <div class="info span-1-5 point-lf-2 info-3 time-43-5">(50-52) The letter of <b>Galatians</b> is completed</div>
+
+               <div class="info span-2-5 point-lf-1 info-8 time-43-6">(60-61) The letters to <b>Ephesians</b>, <b>Philippians</b>, <b>Colossians</b> and <b>Philemon</b> are completed</div>
+               <div class="info span-1-5 point-lf info-10 time-43-6-1">(61) The letters of <b>Hebrews</b> is completed</div>
+
+               <div class="info span-1-5 point-lf info-2 time-43-5">(50) The letter of <b>1 Thessalonians</b> is completed</div>
+               <div class="info span-1-5 point-lf info-4 time-43-5-1">(51) The letter of <b>2 Thessalonians</b> is completed</div>
+               <div class="info span-1-5 point-lf-3 info-12 time-43-6-1">(61-64) The letter of <b>1 Timothy</b> and <b>Titus</b> is completed</div>
+               <div class="info span-1-5 point-lf info-16 time-43-6-5">(65) The letter of <b>2 Timothy</b> is completed</div>
+
+
+               <!-- other letters -->
+               <div class="info span-1-5 point-lf info-17 time-43-6-5">(65) The letter of <b>Jude</b> is completed</div>
+               <div class="info span-1-0 point-lf info-13 time-43-6-2">(62) The letter of <b>James</b> is completed</div>
+               <div class="info span-1-5 point-lf-2 info-14 time-43-6-2">(62-64) <b>Peter's first letter</b> is completed</div>
+               <div class="info span-1-5 point-lf info-15 time-43-6-4">(64) <b>Peter's second letter</b> is completed</div>
+               <div class="info span-1-5 point-lf info-18 time-43-9-6">(96) The letter of the <b>Revelation</b> is completed</div>
+            </div>
+
+            <div id="bblCov">
+               <!-- Time covered by bible books -->
+               <div class="info color-yl info-10 time-0-0 span-26-4-3">Genesis</div>
+               <div class="info color-yl info-11 time-26-4-3 span-1-3-5">Exodus</div>
+               <div class="info point-lf-yl info-12 time-27-8-8 span-0-2">Leviticus</div>
+               <div class="info color-yl info-13 time-27-8-8 span-0-3-9">Numbers</div>
+               <div class="info point-lf-yl info-14 time-28-2-7 span-0-3">Deuteronomy</div>
+
+               <div class="info color-yl fade-rt info-10 time-28-2-7 span-0-2-3">Joshua</div>
+               <div class="info color-yl fade-all info-11 time-28-5 span-3-3">Judges</div>
+               <div class="info color-yl info-12 time-28-5 fade-all span-3-3">Ruth (11 Years)</div>
+
+               <div class="info color-yl fade-lf info-13 time-31-2 span-1-0-2">1 Samuel</div>
+               <div class="info color-yl fade-rt info-14 time-32-2-3 span-0-3-7">2 Samuel</div>
+               <div class="info color-yl fade-lf info-15 time-32-6 span-4-6">1 & 2 Kings</div>
+               <div class="info color-yl fade-lf info-13 time-32-2-3 span-5-4">1 & 2 Chronicles</div>
+               <div class="info color-yl fade-rt info-14 time-37-6-3 span-0-7">Ezra</div>
+
+               <div class="info point-lf-13-yl info-13 time-38-4-4 span-0-2">Nehemiah</div>
+               <div class="info color-yl info-15 fade-rt time-38-0-7 span-0-1-8">Esther</div>
+
+
+               <div class="info color-yl info-16 fade-all time-28-2-7 span-10-0">Psalms</div>
+               <div class="info color-yl info-17 fade-all time-32-2-3 span-3-6">Proverbs</div>
+               <div class="info color-yl info-18 fade-all time-32-2-3 span-0-8">Ecclesiastes</div>
+               <div class="info color-yl info-19 fade-all time-32-0-3 span-0-8">Song of Solomon</div>
+
+               <div class="info color-yl info-18 fade-all time-35-2-2 span-0-4-6">Isaiah</div>
+               <div class="info color-yl info-19 time-36-5-3 span-0-6-7">Jeremiah</div>
+               <div class="info color-yl info-18 fade-all time-36-5-3 span-0-6-7">Lamentations</div>
+               <div class="info color-yl info-14 fade-rt time-36-8-7 span-0-2-2">Ezekiel</div>
+               <div class="info color-yl info-17 fade-rt time-36-8-2 span-0-8-2">Daniel</div>
+
+
+               <div class="info color-yl info-14 fade-all time-34-9-6 span-0-5-9">Hosea</div>
+               <div class="info point-lf-1-yl info-12 time-34-8 span-0-1-5">Joel</div>
+               <div class="info point-lf-1-yl info-12 time-34-9-6 span-0-1-5">Amos</div>
+               <div class="info point-lf-1-yl info-12 time-36-9-3 span-0-2">Obadiah</div>
+               <div class="info point-lf-1-yl info-12 time-34-5-6 span-0-1-5">Jonah</div>
+               <div class="info color-yl info-12 time-35-2-3 span-0-2">Micah</div>
+               <div class="info point-lf-1-yl info-12 time-36-6-8 span-0-2">Nahum</div>
+               <div class="info point-lf-1-yl info-11 time-36-7-2 span-0-2">Habakkuk</div>
+               <div class="info point-lf-1-yl info-14 time-36-5-2 span-0-2">Zephaniah</div>
+               <div class="info point-lf-1-yl info-17 time-37-8 span-0-1 span-0-1">Haggai</div>
+               <div class="info color-yl info-13 time-37-8-2 span-0-1 span-0-2">Zechariah</div>
+               <div class="info point-lf-1-yl info-14 time-38-5-7 span-0-2">Malachi</div>
+
+               <div class="info color-yl info-20 time-42-9-8 span-0-3-5">Matthew</div>
+               <div class="info point-lf-4-yl info-21 time-43-2-9 span-0-2">Mark</div>
+               <div class="info color-yl info-22 time-42-9-7 span-0-3-6">Luke</div>
+               <div class="info point-lf-4-yl info-23 time-43-2-9 span-0-2">John</div>
+
+               <div class="info color-yl info-24 time-43-3-3 span-0-2-8">Acts</div>
+            </div>
+
+            <!-- lifespans -->
+            <div class="info color-red info-21 time-2-7-4 span-9-3">Adam</div>
+            <div class="info color-red info-21 time-13-3 span-9-5-0">Noah</div>
+            <div class="info color-red info-21 time-22-8-2 span-1-7-5">Abraham</div>
+            <div class="info color-red info-21 time-27-0-7 span-1-2">Moses</div>
+
+            <!-- Events -->
+            <div class="info point-lf-1-pk span-0-4 info-12 time-19-3">The Great Deluge</div>
+
+            <div id="kings">
+               <!-- Reigns of Kings-->
+               <div class="info fade-lf color-rbl info-21 time-31-8-3 span-0-4">Saul</div>
+               <div class="info color-rbl b-lf info-21 time-32-2-3 span-0-4">David</div>
+               <div class="info color-rbl b-lf info-21 time-32-6-3 span-0-4">Solomon</div>
+               <!-- Kings of Judah -->
+               <div class="info color-rbl b-lf info-21 time-33-0-3 span-0-1-7">Rehoboam</div>
+               <div class="info point-lf-2-rbl info-22 time-33-2 span-0-1">Abijah</div>
+               <div class="info color-rbl b-lf info-21 time-33-2-2 span-0-4-1">Asa</div>
+               <div class="info color-rbl b-lf info-21 time-33-6-3 span-0-2-5">Jehoshaphat</div>
+               <div class="info point-lf-8-rbl info-22 time-33-8-8 span-0-2-0">Jehoram</div>
+               <div class="info point-lf-2-rbl info-23 time-33-9-6 span-0-0-1">Ahaziah</div>
+               <div class="info point-lf-6-rbl info-24 time-33-9-7 span-0-4-0">Queen Athaliah</div>
+               <div class="info color-rbl info-21 time-34-0-3 span-0-4-0">Jehoash</div>
+               <div class="info color-rbl b-lf info-21 time-34-4-3 span-0-2-9">Amaziah</div>
+               <div class="info color-rbl b-lf info-21 time-34-7-2 span-0-5-2">Uzziah</div>
+               <div class="info color-rbl b-lf info-21 time-35-2-4 span-0-1-6">Jotham</div>
+               <div class="info color-rbl b-lf info-21 time-35-4 span-0-1-6">Ahaz</div>
+               <div class="info color-rbl b-lf info-21 time-35-5-6 span-0-2-9">Hezekiah</div>
+               <div class="info color-rbl b-lf info-21 time-35-8-5 span-0-5-5">Manasseh</div>
+               <div class="info point-lf-1-rbl info-22 time-36-4 span-0-2-0">Amon</div>
+               <div class="info color-rbl b-lf info-21 time-36-4-1 span-0-3-1">Josiah</div>
+               <div class="info point-lf-rbl info-21 time-36-7-2 span-0-2-0">Jehoahaz</div>
+               <div class="info point-lf-11-rbl info-22 time-36-7-2 span-0-1-1">Jehoiakim</div>
+               <div class="info point-lf-rbl info-23 time-36-8-3 span-0-2-0">Jehoiachin</div>
+               <div class="info point-lf-11-rbl info-24 time-36-8-3 span-0-1-1">Zedekiah</div>
+               <!-- Kings of Israel -->
+               <div class="info color-bl b-lf info-25 time-33-0-3 span-0-2-0">Jeroboam</div>
+               <div class="info point-lf-1-bl info-26 time-33-2-3 span-0-1-5">Nadab</div>
+               <div class="info color-bl b-lf info-25 time-33-2-4 span-0-2-4">Baasha</div>
+               <div class="info point-lf-1-bl info-26 time-33-4-8 span-0-1-5">Elah</div>
+               <div class="info point-lf-bl info-27 time-33-5 span-0-1-5">Zimri</div>
+               <div class="info point-lf-4-bl info-28 time-33-5 span-0-3-5">Omri and Tibni</div>
+               <div class="info point-lf-8-bl info-29 time-33-5-3 span-0-3-5">Omri (alone)</div>
+               <div class="info color-bl info-25 time-33-6 span-0-2-2">Ahab</div>
+               <div class="info point-lf-1-bl info-26 time-33-8-2 span-0-2">Ahaziah</div>
+               <div class="info point-lf-11-bl info-27 time-33-8-3 span-0-3">Jehoram</div>
+               <div class="info color-bl info-25 time-33-9-5 span-0-2-8">Jehu</div>
+               <div class="info color-bl b-lf info-25 time-34-2-3 span-0-1-8">Jehoahaz</div>
+               <div class="info color-bl b-lf info-26 time-34-3-8 span-0-1-9">Jehoash</div>
+               <div class="info color-bl b-rt info-25 time-34-5-6 span-0-4-1">Jeroboam II</div>
+               <div class="info point-lf-bl info-25 time-34-9-7 span-0-2">Zechariah</div>
+               <div class="info point-lf-bl info-26 time-35-0-8 span-0-2">Shallum</div>
+               <div class="info point-lf-10-bl info-27 time-35-0-9 span-0-2">Menahem</div>
+               <div class="info point-lf-1-bl info-28 time-35-2 span-0-2">Pekahiah</div>
+               <div class="info color-bl b-lf info-25 time-35-2-2 span-0-2">Pekah</div>
+               <div class="info color-bl b-lf info-25 time-35-4-2 span-0-1-8">Hoshea</div>
+            </div>
+         </info>
+      </timeline>
+
+   <emptyspace>
+      <div id="tg0" class="trigger">1</div>
+      <div class="block"></div>
+      <div id="tg1" class="trigger">1</div>
+      <div class="block"></div>
+      <div id="tg2" class="trigger"></div>
+      <div class="block"></div>
+      <div id="tg3" class="trigger"></div>
+      <div class="block"></div>
+      <div id="tg4" class="trigger">4</div>
+      <div class="block"></div>
+      <div id="tg5" class="trigger"></div>
+      <div class="block"></div>
+      <div id="tg6" class="trigger"></div>
+      <div class="block"></div>
+      <div id="tg7" class="trigger"></div>
+      <div class="block"></div>
+      <div id="tg8" class="trigger"></div>
+      <div class="block"></div>
+      <div id="tg9" class="trigger"></div>
+      <div class="block"></div>
+      <div id="tg10" class="trigger"></div>
+      <div class="block"></div>
+      <div id="tg11" class="trigger"></div>
+   </emptyspace>
+   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+   <script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js'></script>
+
+   <script src="js/index.js"></script>
+
+   </body>
+</html>
