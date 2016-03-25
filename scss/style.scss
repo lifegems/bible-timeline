@@ -1,0 +1,377 @@
+$yellow:    #E8E60C;
+$blue:      #5E92B2;
+$red:       #855;
+$royalblue: #015084;
+$dkgray:    #622;
+$mdgray:    #888;
+$ltgray:    #bbb;
+$pink:      #E80C7A;
+
+body {
+   font-family: 'Lato', sans-serif;
+}
+.fade {
+   &-all {
+      box-shadow: inset 100px 0px 100px -50px #fff, 
+                 inset -100px 0px 100px -50px #fff;
+   }
+   &-lf {
+      box-shadow: inset 100px 0px 100px -50px #fff;
+   }
+   &-rt {
+      box-shadow: inset 0px 0px 0px 0px #000,
+            inset -100px 0px 100px -50px #fff;
+   }
+}
+
+@mixin infoSection($top-spacing) {
+   margin-top: 5px;
+   margin-left: 5px;
+   position: fixed;
+   top: $top-spacing * 25px;
+}
+
+.color {
+   &-yl {
+      background-color: $yellow;
+   }
+   &-rbl {
+      background-color: $royalblue;
+      color: #eee;
+   }
+   &-bl {
+      background-color: $blue;
+      color: #eee;
+   }
+   &-lg {
+      background-color: $ltgray;
+      color: #555;
+      font-weight: bold;
+   }
+   &-mg {
+      background-color: $mdgray;
+      color: #eee;
+   }
+   &-red {         
+      background-color: $red;
+      color: #eee;
+   }
+   &-pk {         
+      background-color: $pink;
+      color: #eee;
+   }
+   &-dk {
+      background-color: $dkgray;
+      color: #eee;
+   }
+}
+
+.notes {
+   position: absolute;
+   color: $mdgray;
+   text-align: center;
+}
+
+timeline {
+   #settings {
+      z-index: 3;
+      position: fixed;
+      bottom: 10%;
+      left: 0;
+      #settings-btn {
+         cursor: pointer;
+         height: 30px;
+         width: 30px;
+         line-height: 27px;
+         background-color: #ccc;
+         opacity: 0.8;
+         text-align: center;
+         position: fixed;
+         bottom: 10%;
+      }
+      #settings-menu {
+         opacity: 0;
+         //left: 1.5%;
+         bottom: 14.1%;
+         text-indent: 2%;
+         padding: 10px;
+         position: fixed;
+         width: 300px;
+         background-color: #bbb;
+         opacity: 0.8;
+         line-height: 0.25em;
+      }
+   }
+   #nav {
+      z-index: 3;
+      line-height: 27px;
+      text-align: center;
+      text-size: 30px;
+      position: fixed;
+      padding-top: 10px;
+      top: 30px;
+      left: 1.5%;
+      width: 110px;
+      height: 110px;
+      #navUp, #navDn, #navRt, #navLf {
+         cursor: pointer;
+         position: fixed;
+         width: 30px;
+         height: 30px;
+         background-color: #ccc;
+         opacity: 0.8;
+         &:active {
+            background-color: #888;
+         }
+      }
+      #navUp {
+         //left: 49px;
+      }
+      #navDn {
+         //left: 49px;
+         //padding-top: 50px;
+         top: 90px;//80px;
+      }
+      #navRt {
+         top: 48px;
+         left: 80px;
+      }
+      #navLf {
+         top: 48px;
+      }
+   }
+   #legend {
+      z-index: 3;
+      position: fixed;
+      // top: 10%;
+      right: 1.5%;
+      #expand {
+         top: 5%;
+         cursor: pointer;
+         height: 30px;
+         width: 30px;
+         line-height: 27px;
+         background-color: #ccc;
+         opacity: 0.8;
+         text-align: center;
+         position: fixed;
+      }
+      #help {
+         top: 10%;
+         cursor: pointer;
+         height: 30px;
+         width: 30px;
+         line-height: 27px;
+         background-color: #ccc;
+         opacity: 0.8;
+         text-align: center;
+         position: fixed;
+      }
+      #key {
+         opacity: 0;
+         right: 1.5%;
+         top: -30%;
+         text-indent: 3%;
+         padding: 10px;
+         position: fixed;
+         width: 300px;
+         background-color: #bbb;
+         opacity: 0.8;
+         line-height: 0.4em;
+         .blob {
+            // margin: 5px 5px 5px 5px;
+            float: left;
+            width: 20px;
+            height: 20px;
+         }
+      }
+      // #expand {
+      //    cursor: pointer;
+      //    line-height: 4px;
+      // }
+      // .blob {
+      //    margin: 5px 5px 5px 5px;
+      //    float: left;
+      //    width: 20px;
+      //    height: 20px;
+      // }
+      // text-indent: 2%;
+      // padding: 10px;
+      // position: fixed;
+      // right: 1.5%;
+      // top: 3%;
+      // width: 200px;
+      // background-color: #ccc;
+      // z-index: 3;
+      // opacity: 0.8;
+   }
+   info {
+      text-align: center;
+      height: 23px;
+      .info- {
+         $spacing: 25px;
+         @for $i from 0 through 40 {
+            $info: $i + 1;
+            &#{$info} {
+               @include infoSection($i);
+            }
+         }
+      }
+      .b {
+         &-rt {
+            border-right: 0.5px solid #fff;
+         }
+         &-lf {
+            border-left: 0.5px solid #fff;
+         }
+      }
+      .point {
+         &-rt {
+            padding-right: 3px;
+            text-align: right;
+            color: #555;
+            border-right: 2px solid #888;
+         }
+         &-lf {
+            padding-left: 3px;
+            text-align: left;
+            color: #555;
+            border-left: 2px solid #888;  
+            &-yl {
+               border-left: 2px solid $yellow;
+            }
+            &-bl {
+               border-left: 2px solid $blue;
+            }
+            &-rbl {
+               border-left: 2px solid $royalblue;
+            }  
+            &-pk {
+               border-left: 2px solid $pink;
+            }  
+         }
+         &-lf- {
+            @for $i from 1 to 19 {
+               &#{$i} {
+                  $width: $i * 4px;
+                  padding-left: 3px;
+                  text-align: left;
+                  color: #555;
+                  border-left: $width solid #888;   
+                  &-yl {
+                     border-left: $width solid $yellow;
+                  }
+                  &-bl {
+                     border-left: $width solid $blue;
+                  }
+                  &-rbl {
+                     border-left: $width solid $royalblue;
+                  }  
+                  &-pk {
+                     border-left: $width solid $pink;
+                  }               
+               }            
+            }
+         }
+      }
+      .span {
+         $width: 20%;
+         &-rt {
+            padding-left: 5%;
+            width: 10000%;
+            text-align: left;
+         }
+         &-lf {
+            padding-right: 5%;
+            text-align: right;
+         }
+         @for $i from 0 to 29 {
+            &-#{$i} {
+               $large: $i * 20%;
+               width: $large;
+               @for $j from 0 to 10 {
+                  &-#{$j} {
+                     $small: $j * 2%;
+                     width: $large + $small;
+                     @for $k from 0 to 10 {
+                        &-#{$k} {
+                           $tiny: $k * 0.2%;
+                           width: $large + $small + $tiny;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+      $time: 20%;
+      .time {
+         @for $d from 0 to 60 {
+            &-#{$d} {
+               @for $s from 0 to 10 {
+                  &-#{$s} {
+                     $space: ($s * 0.1) + $d;
+                     left: $space * 20%;
+                     @for $ss from 1 to 10 {
+                        &-#{$ss} {
+                           $smSpace: ($ss * 0.01) + $space;
+                           left: $smSpace * 20%;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+   
+   #mainline {
+      z-index: 3;
+      position: fixed;
+      bottom: 4%;
+      border-bottom: 3px solid #666;
+      width: 100%;
+   }
+
+   .linegroup {
+      z-index: 3;
+      .dateline{
+            z-index: 3;
+            color: #666;
+         &-sm {
+            z-index: 3;
+            position: fixed;
+            text-indent: 0.1%;
+            bottom: 2%;
+            border-left: 2px solid #666;
+            height: 15px;
+            padding-bottom: 1.5%;
+         }
+         &-md {
+            z-index: 3;
+            position: fixed;
+            text-indent: 0.1%;
+            bottom: 2%;
+            border-left: 3px solid #666;
+            height: 30px;
+            width: 8%;
+            padding-bottom: 3%;
+         }
+      } 
+   }  
+}
+
+emptyspace {
+   .trigger {
+      visibility: hidden;
+      height: 2px;
+      width: 20px;
+      background-color: red;
+   }
+   .block {
+      visibility: hidden;
+      height: 10000px;
+      width: 10px;
+      background-color: blue;
+   }
+}
