@@ -7,7 +7,7 @@ function initDateline() {
       addNewDate(startDate + i, " B.C.");
    }
    addNewDate("-1 B.C. - 1 A.D.", "");
-   for (var i = 100; i < 105; i = i + 100) {
+   for (var i = 100; i < 2200; i = i + 100) {
       addNewDate(startDate + i, " A.D.");
    }
    TweenMax.fromTo("#mainline", 2, {alpha: 0}, {alpha: 1});
@@ -110,6 +110,7 @@ $('#navUp').on('click', function(e) {
 });
 
 // menu toggles
+TweenMax.to("#key", 0, {alpha: 0});
 var blLegendExpanded = false;
 function setLegendIcon() {
    $('#expand').html('<span class="fa fa-times"></span>');
