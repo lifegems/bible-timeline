@@ -108,7 +108,14 @@ $('#navDn').on('click', function(e) {
 $('#navUp').on('click', function(e) {
    TweenMax.to(".info", 0.2, {y: "+=25px", ease: Linear.easeNone});
 });
-
+$('#navRt').on('click', function(e) {
+   TweenMax.to(".info", 0.6, {x: "-=500px", ease: Linear.easeNone});
+   TweenMax.to([".dateline-sm",".dateline-md"], 0.6, {x: "-=500px", ease: Linear.easeNone});
+});
+$('#navLf').on('click', function(e) {
+   TweenMax.to(".info", 0.6, {x: "+=500px", ease: Linear.easeNone});
+   TweenMax.to([".dateline-sm",".dateline-md"], 0.6, {x: "+=500px", ease: Linear.easeNone});
+});
 // menu toggles
 TweenMax.to("#key", 0, {alpha: 0});
 var blLegendExpanded = false;

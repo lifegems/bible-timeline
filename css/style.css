@@ -83,13 +83,16 @@ timeline #nav {
     opacity: 0.8; }
     timeline #nav #navUp:active, timeline #nav #navDn:active, timeline #nav #navRt:active, timeline #nav #navLf:active {
       background-color: #888; }
+  timeline #nav #navUp {
+    left: 49px; }
   timeline #nav #navDn {
-    top: 90px; }
+    left: 49px;
+    top: 100px; }
   timeline #nav #navRt {
-    top: 48px;
+    top: 70px;
     left: 80px; }
   timeline #nav #navLf {
-    top: 48px; }
+    top: 70px; }
 timeline #legend {
   z-index: 3;
   position: fixed;
